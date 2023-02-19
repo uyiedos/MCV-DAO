@@ -36,7 +36,7 @@ if (hasClaimedNFT) {
       <p>Congratulations on being a member</p>
     </div>
   );
-};
+}
 
   // Render mint nft screen.
   return (
