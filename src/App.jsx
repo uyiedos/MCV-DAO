@@ -1,4 +1,4 @@
-import { useAddress, ConnectWallet, useContract, useNFTBalance } from '@thirdweb-dev/react';
+import { useAddress, ConnectWallet, Web3Button, useContract, useNFTBalance } from '@thirdweb-dev/react';
 import { useState, useEffect, useMemo } from 'react';
 
 const App = () => {
@@ -6,7 +6,7 @@ const App = () => {
   const address = useAddress();
   console.log("👋 Address:", address);
   // Initialize our Edition Drop contract
-  const editionDropAddress = "0xc0FDE8e26e1cF78E9e0581D3cDB5d3b94FFAF34c"
+  const editionDropAddress = "0xc0FDE8e26e1cF78E9e0581D3cDB5d3b94FFAF34c";
   const { contract: editionDrop } = useContract(editionDropAddress, "edition-drop");
   // Hook to check if the user has our NFT
   const { data: nftBalance } = useNFTBalance(editionDrop, address, "0")
@@ -15,20 +15,19 @@ const App = () => {
     return nftBalance && nftBalance.gt(0)
   }, [nftBalance])
 
-  // ... include all your other code that was already there below.
-
   // This is the case where the user hasn't connected their wallet
   // to your web app. Let them call connectWallet.
   if (!address) {
     return (
       <div className="landing">
-        <h1>Welcome to MCVDAO</h1>
+        <h1>Welcome to NarutoDAO</h1>
         <div className="btn-hero">
           <ConnectWallet />
         </div>
       </div>
     );
   }
+
   // Render mint nft screen.
   return (
     <div className="mint-nft">
