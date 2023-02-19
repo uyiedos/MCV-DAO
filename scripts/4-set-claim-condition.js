@@ -8,7 +8,7 @@ import { MaxUint256 } from "@ethersproject/constants";
     // we can have multiple phases starting at different times if we want to
     const claimConditions = [{
       // When people are gonna be able to start claiming the NFTs (now)
-      startTime: 03/01/2023(),
+      startTime: 03/2023(),
       // The maximum number of NFTs that can be claimed.
       maxClaimable: 5000,
       // The price of our NFT (free)
