@@ -29,19 +29,10 @@ const App = () => {
       </div>
     );
   }
-  // Add this little piece!
-if (hasClaimedNFT) {
-  return (
-    <div className="member-page">
-      <h1>🍪DAO Member Page</h1>
-      <p>Congratulations on being a member</p>
-    </div>
-  );
-};
- // Render mint nft screen.
+  // Render mint nft screen.
   return (
     <div className="mint-nft">
-      <h1>Mint your free MCVDAO Membership NFT</h1>
+      <h1>Mint your free 🍪DAO Membership NFT</h1>
       <div className="btn-hero">
         <Web3Button 
           contractAddress={editionDropAddress}
