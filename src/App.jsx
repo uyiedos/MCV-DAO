@@ -32,7 +32,7 @@ const App = () => {
   // Vote ERC-20 from https://rinkeby.etherscan.io/address/0x813244Ca4AC13550F7411A5Cd40C29AF6Cb35BA5
   //  provides access to coded proposals
 
-  const token = useToken("0xeEe746dcE397378567039d845740D9bf28Fb399D");
+  const token = useToken("0x6CE8913B8139B44ea43C2509b0eEf03835fF6345");
   // ERC-20 from https://rinkeby.etherscan.io/address/0xeEe746dcE397378567039d845740D9bf28Fb399D
 
   const editionDrop = useEditionDrop(
@@ -214,7 +214,7 @@ const App = () => {
   if (hasClaimedNFT) {
     return (
       <div className="member-page">
-        <h1>UpCyDAO Member Page</h1>
+        <h1>MCVDAO Member Page</h1>
         <p className="thankyou">Thank You for being a member!</p>
         <div>
           <div>
