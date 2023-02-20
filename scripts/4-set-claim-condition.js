@@ -20,7 +20,7 @@ import { MaxUint256 } from "@ethersproject/constants";
       waitInSeconds: MaxUint256,
     }];
 
-    await editionDrop.claimConditions.set("0", claimConditions);
+    await editionDrop.claimConditions.set(0, claimConditions);
     console.log("✅ Sucessfully set claim condition:", editionDrop.address);
   
     //This is how to mint an nft
