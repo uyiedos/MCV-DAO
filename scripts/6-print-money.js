@@ -8,7 +8,6 @@ import sdk from "./1-initialize-sdk.js";
     // What's the max supply you want to set? 1,000,000 is a nice number!
     const amount = 2000000000;
     // Interact with your deployed ERC-20 contract and mint the tokens!
-    await token.mint(amount);
     const tx = await program.mintTo(address, 2000000000);
     const totalSupply = await token.totalSupply();
 
