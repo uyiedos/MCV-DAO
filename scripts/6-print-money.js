@@ -1,13 +1,15 @@
 import sdk from "./1-initialize-sdk.js";
 
-const token = sdk.getToken("0x6CE8913B8139B44ea43C2509b0eEf03835fF6345");
+const toAddress = "0xb67F379C9e7C7711563D5aA80bEEd9ed2D4652F8";
 
 (async () => {
     try {
         // max token supply
         const amount = 2_000_000_000;
         // interact with the deployed ERC-20 contract and mint the tokens
-        await token.mintToSelf(amount);
+        
+        await contract.mintTo(toAddress, amount);
+        
         const totalSupply = await token.totalSupply();
 
         // printing to the console how many tokens now exist
