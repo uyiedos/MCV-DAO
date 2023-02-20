@@ -24,7 +24,7 @@ import { MaxUint256 } from "@ethersproject/constants";
     console.log("✅ Sucessfully set claim condition:", editionDrop.address);
   
     //This is how to mint an nft
-    await editionDrop.claimConditions.set("0", 1)
+    await editionDrop.claimConditions("0", 1)
     console.log("✅ Minted NFT to", process.env.WALLET_ADDRESS)
   } catch (error) {
     console.error("Failed to set claim condition", error);
