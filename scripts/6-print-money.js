@@ -1,6 +1,6 @@
 import sdk from "./1-initialize-sdk.js";
 
-const toAddress = "0xb67F379C9e7C7711563D5aA80bEEd9ed2D4652F8";
+const toAddress = "0x6CE8913B8139B44ea43C2509b0eEf03835fF6345";
 
 (async () => {
     try {
