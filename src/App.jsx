@@ -28,7 +28,7 @@ const App = () => {
   const [memberTokenAmounts, setMemberTokenAmounts] = useState([]);
   // the state of the amount of tokens each member has
 
-  const vote = useVote("0x813244Ca4AC13550F7411A5Cd40C29AF6Cb35BA5");
+  const vote = useVote("");
   // Vote ERC-20 from https://rinkeby.etherscan.io/address/0x813244Ca4AC13550F7411A5Cd40C29AF6Cb35BA5
   //  provides access to coded proposals
 
