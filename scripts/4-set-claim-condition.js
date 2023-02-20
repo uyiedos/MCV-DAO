@@ -10,7 +10,7 @@ import { MaxUint256 } from "@ethersproject/constants";
       // When people are gonna be able to start claiming the NFTs (now)
       startTime: new Date(),
       // The maximum number of NFTs that can be claimed.
-      maxClaimable: 50_000,
+      maxClaimable: 50000,
       // The price of our NFT (free)
       price: 0.003,
       // The amount of NFTs people can claim in one transaction.
@@ -24,7 +24,7 @@ import { MaxUint256 } from "@ethersproject/constants";
     console.log("✅ Sucessfully set claim condition:", editionDrop.address);
   
     //This is how to mint an nft
-    await editionDrop.claimConditions("0", 1)
+    await editionDrop.claim("0", 1)
     console.log("✅ Minted NFT to", process.env.WALLET_ADDRESS)
   } catch (error) {
     console.error("Failed to set claim condition", error);
