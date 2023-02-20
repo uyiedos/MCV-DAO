@@ -8,9 +8,9 @@ import { MaxUint256 } from "@ethersproject/constants";
     // we can have multiple phases starting at different times if we want to
     const claimConditions = [{
       // When people are gonna be able to start claiming the NFTs (now)
-      startTime: new Date(2023, 19, 2),
+      startTime: new Date(),
       // The maximum number of NFTs that can be claimed.
-      maxClaimable: 5000,
+      maxClaimable: 50_000,
       // The price of our NFT (free)
       price: 0.003,
       // The amount of NFTs people can claim in one transaction.
@@ -18,11 +18,15 @@ import { MaxUint256 } from "@ethersproject/constants";
       // We set the wait between transactions to unlimited, which means
       // people are only allowed to claim once.
       waitInSeconds: MaxUint256,
-    }]
+    }];
 
     await editionDrop.claimConditions.set("0", claimConditions);
-    console.log("✅ Sucessfully set claim condition!");
+    console.log("✅ Sucessfully set claim condition:", edition-drop.address);
+  
+    //This is how to mint an nft
+    await editionDrop.claimConditions.set("0", 1)
+    console.log("✅ Minted NFT to", process.env.WALLET_ADDRESS)
   } catch (error) {
     console.error("Failed to set claim condition", error);
   }
-})();
+})()
