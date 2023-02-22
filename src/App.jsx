@@ -1,4 +1,4 @@
-import { useAddress, ConnectWallet, useContract, useNFTBalance } from '@thirdweb-dev/react';
+import { useAddress, ConnectWallet, useContract, useState, useEffect, useMemo, useNFTBalance } from '@thirdweb-dev/react';
 import { useState, useEffect, useMemo } from 'react';
 
 const App = () => {
