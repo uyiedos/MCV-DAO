@@ -3,30 +3,31 @@ import { MaxUint256 } from "@ethersproject/constants";
 
 (async () => {
   try {
-    const editionDrop = await sdk.getContract("0xc0FDE8e26e1cF78E9e0581D3cDB5d3b94FFAF34c", "edition-drop");
+    const editionDrop = await sdk.getContract(
+      "0xc0FDE8e26e1cF78E9e0581D3cDB5d3b94FFAF34c",
+      "edition-drop"
+    );
     // We define our claim conditions, this is an array of objects because
     // we can have multiple phases starting at different times if we want to
-    const claimConditions = [{
-      // When people are gonna be able to start claiming the NFTs (now)
-      startTime: new Date(),
-      // The maximum number of NFTs that can be claimed.
-      maxClaimable: 50000,
-      // The price of our NFT (free)
-      price: 0.003,
-      // The amount of NFTs people can claim in one transaction.
-      maxClaimablePerWallet: 1,
-      // We set the wait between transactions to unlimited, which means
-      // people are only allowed to claim once.
-      waitInSeconds: MaxUint256,
-    }];
+    const claimConditions = [
+      {
+        // When people are gonna be able to start claiming the NFTs (now)
+        startTime: new Date(),
+        // The maximum number of NFTs that can be claimed.
+        maxClaimable: 50_000,
+        // The price of our NFT (free)
+        price: 0.003,
+        // The amount of NFTs people can claim in one transaction.
+        maxClaimablePerWallet: 1,
+        // We set the wait between transactions to unlimited, which means
+        // people are only allowed to claim once.
+        waitInSeconds: MaxUint256,
+      },
+    ];
 
-    await editionDrop.claimConditions.set(0, claimConditions);
-    console.log("✅ Sucessfully set claim condition:", editionDrop.address);
-  
-    //This is how to mint an nft
-    await editionDrop.claim("0", 1)
-    console.log("✅ Minted NFT to", process.env.WALLET_ADDRESS)
+    await editionDrop.claimConditions.set("0", claimConditions);
+    console.log(" Sucessfully set claim condition!");
   } catch (error) {
     console.error("Failed to set claim condition", error);
   }
-})()
+})();
