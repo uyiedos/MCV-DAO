@@ -54,7 +54,7 @@ if (hasClaimedNFT) {
   // Render mint nft screen.
   return (
     <div className="mint-nft">
-      <h1>Mint your free 🍪MCV Membership NFT</h1>
+      <h1>Mint your free 🍪MCVDAO Membership NFT</h1>
       <div className="btn-hero">
         <Web3Button 
           contractAddress={editionDropAddress}
