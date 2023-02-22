@@ -4,7 +4,7 @@ import sdk from "./1-initialize-sdk.js";
   try {
     const voteContractAddress = await sdk.deployer.deployVote({
       // Give your governance contract a name.
-      name: "MCV DAO governance",
+      name: "MCV DAO Vote",
 
       // This is the location of our governance token, our ERC-20 contract!
       voting_token_address: "0x6CE8913B8139B44ea43C2509b0eEf03835fF6345",
