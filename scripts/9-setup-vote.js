@@ -41,12 +41,12 @@ import sdk from "./1-initialize-sdk.js";
     // Grab our wallet's token balance, remember -- we hold basically the entire supply right now!
     const ownedTokenBalance = await token.balanceOf(process.env.WALLET_ADDRESS);
 
-    // Grab 90% of the supply that we hold.
+    // Grab 50% of the supply that we hold.
     const ownedAmount = ownedTokenBalance.displayValue;
     const percent50 = (Number(ownedAmount) / 100) * 50;
 
-    // Transfer 90% of the supply to our voting contract.
-    await token.transfer(vote.getAddress(), percent90);
+    // Transfer 50% of the supply to our voting contract.
+    await token.transfer(vote.getAddress(), percent50);
 
     console.log(
       "Successfully transferred " + percent50 + " tokens to vote contract"
