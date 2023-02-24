@@ -396,6 +396,10 @@ button:disabled {
   opacity: 0.8;
   pointer-events: none;
 }
+
+
+
+
 $colors: (
   purple: #241379,
   medium-blue: #2185bf,
@@ -541,5 +545,4 @@ div::after {
           0)
         rotate((random(360)) + deg);
     }
-  }
-}
+  
